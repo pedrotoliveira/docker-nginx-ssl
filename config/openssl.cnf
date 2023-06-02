@@ -1,0 +1,22 @@
+[req]
+distinguished_name = req_distinguished_name
+x509_extensions = v3_req
+prompt = no
+
+[req_distinguished_name]
+C = BR
+ST = SP
+L = São Paulo
+O = PPM Tech
+OU = N/A
+CN = Local PPM Dev
+
+[v3_req]
+keyUsage = critical, digitalSignature, keyAgreement
+extendedKeyUsage = serverAuth
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = local.app.com
+DNS.2 = local.api.com
+DNS.3 = local.app.dev.com
